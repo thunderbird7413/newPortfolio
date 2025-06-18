@@ -1,0 +1,195 @@
+.experience-section {
+  padding: 6rem 2rem;
+  background-color: #000103; /* Consistent dark background */
+  color: white;
+}
+
+.experience-container {
+  max-width: 900px; /* Adjust max-width for timeline */
+  margin: 0 auto;
+}
+
+/* Reusing section label styles */
+.section-label {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center label */
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaaaaa;
+}
+
+.section-number {
+  margin-right: 0.5rem;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1px;
+  background-color: #aaaaaa;
+}
+
+.experience-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%; /* Center the timeline line */
+  width: 2px;
+  background-color: #333333; /* Darker line color */
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  margin-bottom: 4rem;
+  position: relative;
+  opacity: 0; /* Initially hidden for reveal effect */
+  transform: translateY(50px); /* Initially moved down for reveal effect */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation for reveal */
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item.visible {
+  opacity: 1; /* Visible when in view */
+  transform: translateY(0); /* Move to original position */
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%; /* Position marker on the line */
+  width: 12px;
+  height: 12px;
+  background-color: white; /* Marker color */
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  border: 2px solid #000103; /* Border color matching background */
+}
+
+.timeline-year {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-150%); /* Position year above the marker */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #aaaaaa; /* Lighter color for year */
+  text-align: center;
+  width: 100%; /* Allow text centering */
+}
+
+.timeline-content {
+  background-color: #1a1a1a; /* Dark background for content */
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 45%; /* Content width */
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  left: 0; /* Position odd items on the left */
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  right: 0; /* Position even items on the right */
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content .company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #cccccc; /* Lighter color for company */
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content .description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #aaaaaa; /* Lighter color for description */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px; /* Move timeline line to the left */
+    transform: none; /* Remove transform */
+  }
+
+  .timeline-item::before {
+    left: 20px; /* Align marker with the line */
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .timeline-year {
+    left: 20px; /* Align year with the line */
+    transform: translateX(0) translateY(-150%); /* Adjust year position */
+    text-align: left;
+    width: auto; /* Auto width */
+    padding-left: 20px; /* Add padding to the left of the year */
+  }
+
+  .timeline-content {
+    max-width: calc(100% - 60px); /* Adjust content width */
+    margin-left: 60px; /* Move content to the right of the line */
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    left: auto; /* Remove fixed left/right positioning */
+    right: auto;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .timeline-content .company,
+  .timeline-content .description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-section {
+    padding: 4rem 1rem;
+  }
+
+  .experience-section h2 {
+    font-size: 2rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 3rem;
+  }
+} 

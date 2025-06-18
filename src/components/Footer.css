@@ -1,0 +1,51 @@
+.footer-section {
+  padding: 3rem 2rem; /* Increased padding */
+  background-color: #000000; /* Dark background */
+  color: #ffffff; /* Lighter color for text */
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex; /* Use flexbox to align items */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 1.5rem; /* Space between copyright and social icons */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem; /* Space between social icons */
+}
+
+.social-icons a {
+  color: #aaaaaa; /* Icon color */
+  font-size: 1.5rem; /* Icon size */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white; /* Highlight color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .footer-section {
+    padding: 2rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-container {
+    gap: 1rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
+  }
+} 

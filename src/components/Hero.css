@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Poppins:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  /* Poppins is still used as a fallback and for general text if needed */
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1670079302709-6d5f10516f37?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* opacity: 1; */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Removed background overlay */
+  /* Removed backdrop filter for blur */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px; /* Increased max-width slightly */
+}
+
+.hero-content h1 {
+  font-family: 'Poppins', sans-serif; /* Using Poppins for sans-serif */
+  font-size: 5rem; /* Increased font size */
+  font-weight: 700; /* Extra bold */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-content p.subtitle {
+  font-size: 3.5rem; /* Increased font size */
+  font-weight: 600; /* Semi-bold for the last line */
+  letter-spacing: 1px;
+  opacity: 1; 
+  animation: fadeInUp 1s ease-out;
+  margin-top: 0.5rem; /* Added margin to separate from italic text */
+}
+
+.hero-content p.subtitle.italic-text {
+  font-family: 'Playfair Display', serif; /* Using Playfair Display for italic serif */
+  font-style: italic;
+  font-size: 3.5rem; /* Increased font size */
+  font-weight: 400; /* Regular weight for italic */
+  margin-bottom: 0.5rem; /* Reduced margin */
+  opacity: 1; /* Full opacity */
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 4rem;
+  }
+  
+  .hero-content p.subtitle {
+    font-size: 3rem;
+  }
+  .hero-content p.subtitle.italic-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-content p.subtitle {
+    font-size: 2rem;
+  }
+  .hero-content p.subtitle.italic-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p.subtitle {
+    font-size: 1.5rem;
+  }
+   .hero-content p.subtitle.italic-text {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,110 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.navbar-logo-end {
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif; /* Using Playfair Display for italic serif */
+  font-style: italic;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-color: rgba(31, 36, 38, 0.9); /* Darker background for links container */
+  padding: 0.1rem 1.5rem;
+  border-radius: 50px; /* Rounded corners */
+  transition: all 0.3s ease-in-out; /* Added transition for smooth opening */
+}
+
+.navbar-item {
+  margin: 0 1rem; /* Adjusted margin between items */
+  padding: 0.5rem 1rem; /* Added padding for hover background */
+  border-radius: 30px; /* Rounded corners for hover background */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-item:hover {
+  background-color: white; /* White background on hover */
+}
+
+.navbar-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-item:hover a {
+  color: #1a1a1a; /* Dark text color on hover */
+}
+
+.home-icon a {
+  font-size: 1.5rem; /* Larger size for home icon */
+}
+
+.hamburger-icon {
+  display: none; /* Hide hamburger on desktop by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Keep logo and icon on the same row */
+    justify-content: space-between; /* Space between logo and icon */
+    padding: 1rem;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem; /* Slightly smaller logo on mobile */
+  }
+
+  .navbar-links {
+    /* Mobile styles for dropdown */
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px; /* Position below the navbar */
+    left: 0;
+    background-color: rgba(31, 36, 38, 0.95); /* Slightly more opaque background */
+    border-radius: 0 0 10px 10px; /* Rounded corners at the bottom */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-links.open {
+    display: flex; /* Show links when menu is open */
+  }
+  
+  .navbar-item {
+    margin: 0.5rem 0; /* Adjust margin for vertical layout */
+    padding: 0.5rem 1rem; /* Keep padding for hover */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger on mobile */
+  }
+} 

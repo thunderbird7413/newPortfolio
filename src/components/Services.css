@@ -1,0 +1,221 @@
+.services-section {
+  padding: 10rem 2rem;
+  background-color: #000000; /* Dark background */
+  color: white;
+  background-image: url('https://assets-global.website-files.com/659e8ba042c43623b67e14ad/659feed645fc74deba226d36_bg-dark.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 4rem; /* Space between columns */
+}
+
+.services-left {
+  flex: 1; /* Take up equal space */
+  max-width: 500px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaaaaa; /* Lighter color for label */
+}
+
+.section-number {
+  margin-right: 0.5rem;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1px;
+  background-color: #aaaaaa;
+}
+
+.services-left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.learn-more-button:hover {
+  background-color: white;
+  color: #1a1a1a;
+}
+
+.services-right {
+  flex: 1; /* Take up equal space */
+}
+
+.services-list {
+  list-style: none;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column; /* Stack header and details vertically */
+  align-items: flex-start; /* Align items to the start */
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #333333; /* Divider line */
+  cursor: pointer; /* Indicate clickable item */
+}
+
+.service-item:last-child {
+  border-bottom: none; /* No divider after the last item */
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Make header take full width */
+}
+
+.service-icon {
+  width: 40px; /* Placeholder size for icon */
+  height: 40px;
+  background-color: #000000; /* Placeholder background */
+  margin-right: 1.5rem;
+  border-radius: 5px; /* Example styling */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-name {
+  flex-grow: 1; /* Allow name to take up space */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service-plus {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #aaaaaa; /* Lighter color for plus/minus icon */
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.service-details {
+  /* Initially hidden, will be shown when .service-item has .open class */
+  display: none;
+  margin-top: 1rem;
+  padding-left: 5.5rem; /* Align with the text below the icon */
+  color: #cccccc; /* Lighter color for detail text */
+  animation: slideDown 0.3s ease-out; /* Animation for opening */
+}
+
+.service-item.open .service-details {
+  display: block; /* Show details when item is open */
+}
+
+.service-details p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.service-sub-items {
+  list-style: disc inside; /* Bullet points for sub-items */
+  padding-left: 0;
+}
+
+.service-sub-items li {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* Animation for sliding down */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Remove the service-divider as it's no longer needed in this layout */
+.service-divider {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .services-container {
+    flex-direction: column; /* Stack columns on smaller screens */
+    gap: 3rem;
+  }
+
+  .services-left {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .services-left h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 4rem 1rem;
+  }
+
+  .services-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-item {
+    padding: 1rem 0;
+  }
+
+  .service-header {
+    flex-direction: row; /* Keep icon and name on the same row on small screens */
+    align-items: center;
+  }
+
+  .service-icon {
+    margin-bottom: 0; /* Remove bottom margin */
+    margin-right: 1rem; /* Add right margin */
+  }
+
+  .service-details {
+    padding-left: 1rem; /* Adjust padding for small screens */
+  }
+
+  .service-sub-items {
+    padding-left: 1rem; /* Adjust padding for sub-items */
+  }
+} 

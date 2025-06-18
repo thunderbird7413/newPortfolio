@@ -1,0 +1,184 @@
+.works-section {
+  padding: 6rem 2rem;
+  background-color: #000103; /* Keeping the user's background color */
+  color: white;
+}
+
+.works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem; /* More space below label */
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaaaaa; /* Lighter color for label */
+}
+
+.section-number {
+  margin-right: 0.5rem;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1px;
+  background-color: #aaaaaa;
+}
+
+/* Remove old grid styles */
+.works-grid {
+  display: block;
+}
+
+.work-item {
+  display: none;
+}
+
+.featured-project {
+  display: flex;
+  align-items: center;
+  gap: 4rem; /* Space between image and details */
+  margin-bottom: 6rem; /* Space between featured projects */
+}
+
+.featured-project:last-child {
+  margin-bottom: 0; /* No bottom margin for the last project */
+}
+
+.project-image {
+  flex: 1; /* Take up equal space */
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Example styling, adjust as needed */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+}
+
+.project-details {
+  flex: 1; /* Take up equal space */
+}
+
+.project-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #aaaaaa; /* Lighter color for label */
+  margin-bottom: 0.5rem;
+}
+
+.project-details h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.project-details p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #cccccc; /* Lighter color for description */
+  margin-bottom: 1.5rem;
+}
+
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap */
+  gap: 0.8rem; /* Space between technology tags */
+  margin-bottom: 1.5rem;
+}
+
+.technology-tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(46, 46, 46, 0.8); /* Semi-transparent dark background for tags */
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.5rem; /* Space between icons */
+  font-size: 1.5rem; /* Size of the icons */
+}
+
+.project-links a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #aaaaaa; /* Lighter color on hover */
+}
+
+/* Alternating image position */
+.featured-project.right-image .project-image {
+  order: 2; /* Place image on the right */
+}
+
+.featured-project.right-image .project-details {
+  order: 1; /* Place details on the left */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .featured-project {
+    flex-direction: column; /* Stack image and details vertically */
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .featured-project.right-image .project-image,
+  .featured-project.right-image .project-details {
+    order: 1; /* Reset order for stacking */
+  }
+
+  .project-image img {
+    max-width: 100%;
+  }
+
+  .project-details {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .project-technologies,
+  .project-links {
+    justify-content: center; /* Center tags and links */
+  }
+
+  .project-details h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-details p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .works-section {
+    padding: 4rem 1rem;
+  }
+  
+  .featured-project {
+    margin-bottom: 3rem;
+  }
+
+  .project-details h3 {
+    font-size: 1.5rem;
+  }
+} 
