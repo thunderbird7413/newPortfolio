@@ -11,13 +11,13 @@ const Contact = () => {
         </div>
         <div className="contact-layout">
           <div className="contact-info-block">
-            <h2>How can we help you about your project?</h2>
+            <h2>How can I help you about your project?</h2>
             <p>IIT Roorkee<br />Roorkee, Uttarakhand, India</p>
             <p>vinayakjat.ps11@gmail.com</p>
             <p>+91 7413882214</p>
           </div>
           <div className="contact-form-block">
-            <p>Need assistance more about our services? Simply fill out our contact form below and our team will be in touch soon!</p>
+            <p>Need assistance more about the services or discuss about the project? Or just drop a hii to connect!!</p>
             <form className="contact-form">
               <div className="form-group">
                 <label htmlFor="name">What is your name *</label>
