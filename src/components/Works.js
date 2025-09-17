@@ -70,21 +70,12 @@ const Works = () => {
     },
     {
       label: 'Featured Project',
-      title: 'UBA IITR',
-      description: "Developing and automating key modules of the UBA website, including secure authentication, database integration, and RESTful APIs using Node.js, Express.js, and MongoDB. Improved data management and accessibility for a rural development initiative.",
-      technologies: ['React.js', 'Mongodb', 'Node.js', 'Express.js'],
-      imageUrl: UBA, // Placeholder image URL
-      githubLink: '#',
-      liveLink: '#',
-    },
-    {
-      label: 'Featured Project',
       title: 'McDonald’s 2.0',
       description: "Redesigned and enhanced the McDonald’s website for the Sheryians Coding School Reimagine Hackathon. Implemented a dynamic and immersive user experience using modern web technologies, smooth animations, interactive sliders, and advanced scrolling effects to push the boundaries of web design and functionality.",
       technologies: ['HTML', 'CSS', 'GSAP', 'Locomotive', 'jQuery', 'Swiper.js'],
-      imageUrl: McDonalds, 
-      githubLink: '#', 
-      liveLink: '#',   
+      imageUrl: McDonalds,
+      githubLink: '#',
+      liveLink: '#',
     }
   ];
 
