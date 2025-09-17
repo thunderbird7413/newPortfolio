@@ -1,11 +1,12 @@
 import React from 'react';
 import './Works.css';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Import icons
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import CareerPathFinder from '../images/career-path-finder.png';
 import Astriverse from '../images/Astriverse.png';
-import Apple from "../images/Apple.png"
-import Cinequest from "../images/Cinequest.png"
-import UBA from "../images/UBA.png"
+import Apple from "../images/Apple.png";
+import Cinequest from "../images/Cinequest.png";
+import UBA from "../images/UBA.png";
+import McDonalds from "../images/McDonalds.png";
 const Works = () => {
   // Updated placeholder data for featured projects
   const featuredProjects = [
@@ -40,35 +41,51 @@ const Works = () => {
       githubLink: '#',
       liveLink: '#',
     },
-        {
-        label: 'Featured Project',
-        title: 'Apple 2.0',
-        description: 'Redesigned Apple’s official website with a fresh UI/UX approach focused on interactivity, accessibility, and seamless navigation. Built using HTML, CSS, and JavaScript, with modern design elements and animations to enhance user engagement and visual appeal.',
-        technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-        imageUrl: Apple, // Placeholder image URL
-        githubLink: '#',
-        liveLink: '#',
-        },
-        {
-        label: 'Featured Project',
-        title: 'Cinequest',
-        description: "Welcome to Cinequest, your ultimate destination for movie enthusiasts! Discover an extensive collection of films from all genres, curated just for you. Whether you're looking for the latest blockbuster or a hidden gem, our app makes finding your next favorite movie effortless. Dive in and start your cinematic journey with us today!",
-        technologies: ['React.js', 'Web APIs'],
-        imageUrl: Cinequest, // Placeholder image URL
-        githubLink: '#',
-        liveLink: '#',
-        },
-        {
-        label: 'Featured Project',
-        title: 'UBA IITR',
-        description: "Developing and automating key modules of the UBA website, including secure authentication, database integration, and RESTful APIs using Node.js, Express.js, and MongoDB. Improved data management and accessibility for a rural development initiative.",
-        technologies: ['React.js', 'Mongodb', 'Node.js', 'Express.js'],
-        imageUrl: UBA, // Placeholder image URL
-        githubLink: '#',
-        liveLink: '#',
-        },
-
-    // Add more featured projects as needed
+    {
+      label: 'Featured Project',
+      title: 'Apple 2.0',
+      description: 'Redesigned Apple’s official website with a fresh UI/UX approach focused on interactivity, accessibility, and seamless navigation. Built using HTML, CSS, and JavaScript, with modern design elements and animations to enhance user engagement and visual appeal.',
+      technologies: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
+      imageUrl: Apple, // Placeholder image URL
+      githubLink: '#',
+      liveLink: '#',
+    },
+    {
+      label: 'Featured Project',
+      title: 'Cinequest',
+      description: "Welcome to Cinequest, your ultimate destination for movie enthusiasts! Discover an extensive collection of films from all genres, curated just for you. Whether you're looking for the latest blockbuster or a hidden gem, our app makes finding your next favorite movie effortless. Dive in and start your cinematic journey with us today!",
+      technologies: ['React.js', 'Web APIs'],
+      imageUrl: Cinequest, // Placeholder image URL
+      githubLink: '#',
+      liveLink: '#',
+    },
+    {
+      label: 'Featured Project',
+      title: 'UBA IITR',
+      description: "Developing and automating key modules of the UBA website, including secure authentication, database integration, and RESTful APIs using Node.js, Express.js, and MongoDB. Improved data management and accessibility for a rural development initiative.",
+      technologies: ['React.js', 'Mongodb', 'Node.js', 'Express.js'],
+      imageUrl: UBA, // Placeholder image URL
+      githubLink: '#',
+      liveLink: '#',
+    },
+    {
+      label: 'Featured Project',
+      title: 'UBA IITR',
+      description: "Developing and automating key modules of the UBA website, including secure authentication, database integration, and RESTful APIs using Node.js, Express.js, and MongoDB. Improved data management and accessibility for a rural development initiative.",
+      technologies: ['React.js', 'Mongodb', 'Node.js', 'Express.js'],
+      imageUrl: UBA, // Placeholder image URL
+      githubLink: '#',
+      liveLink: '#',
+    },
+    {
+      label: 'Featured Project',
+      title: 'McDonald’s 2.0',
+      description: "Redesigned and enhanced the McDonald’s website for the Sheryians Coding School Reimagine Hackathon. Implemented a dynamic and immersive user experience using modern web technologies, smooth animations, interactive sliders, and advanced scrolling effects to push the boundaries of web design and functionality.",
+      technologies: ['HTML', 'CSS', 'GSAP', 'Locomotive', 'jQuery', 'Swiper.js'],
+      imageUrl: McDonalds, 
+      githubLink: '#', 
+      liveLink: '#',   
+    }
   ];
 
   return (
